@@ -51,7 +51,6 @@ now that we are out of the scope, let's see what happens if we try to log extern
 */
 console.log(external);
 // well that worked well, still in global scope
-console.log(internal);
+//console.log(internal);
 // hmm... Uncaught ReferenceError: internal is not defined
-// yeah, not in scope
-// how about external?
+// yeah, not in scope, I guess i'll comment this out
