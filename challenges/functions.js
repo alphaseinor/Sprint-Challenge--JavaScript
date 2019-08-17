@@ -16,15 +16,20 @@ let consume = (arg1, arg2, callback) => callback(arg1, arg2);
 
 let add = (arg1, arg2) => arg1 + arg2;
 let multiply = (arg1, arg2) => arg1 * arg2;
+let greeting = (first, last) => `Hello ${first} ${last}, nice to meet you!`;
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume('Mary', 'Poppins', greeting)); // Hello Mary Poppins, nice to meet you!
 
 // ==== Closures ====
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
+
+/*
+The scope of external is global, the scope of internal is function, so anything inside the function can access it, however once you are out of the scope of the function you cannot have access to internal. 
+*/
 
 // Explanation:
 
@@ -40,3 +45,13 @@ function myFunction() {
   nestedFunction();
 }
 myFunction();
+
+/*
+now that we are out of the scope, let's see what happens if we try to log external then internal
+*/
+console.log(external);
+// well that worked well, still in global scope
+console.log(internal);
+// hmm... Uncaught ReferenceError: internal is not defined
+// yeah, not in scope
+// how about external?
