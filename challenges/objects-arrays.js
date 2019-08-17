@@ -5,7 +5,7 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
-
+console.log(`****** Objects ******`);
 let Dinosaur = function(props) {
   this.name = props.name;
   this.diet = props.diet;
@@ -64,6 +64,8 @@ console.log(tyrannosaurus.period);
 console.log(tyrannosaurus.roar('RAWERSRARARWERSARARARRRR!'));
 
 // ==== Arrays ====
+
+console.log(`****** Arrays ******`);
 
 // Given an array of college graduates.  Complete the following requests using any array method you like
 
@@ -156,7 +158,7 @@ let uni = graduates.filter(x => x.university.includes('Uni'));
 console.log(uni);
 
 // ==== ADVANCED Array Methods ====
-
+console.log(`****** Advanced Array Methods ******`);
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
 zooAnimals = [
